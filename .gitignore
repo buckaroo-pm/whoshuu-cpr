@@ -36,6 +36,7 @@ install_manifest.txt
 
 # Custom
 build/
+digest.txt
 
 # Jekyll stuff
 _includes/
@@ -43,3 +44,11 @@ _site/
 
 # Vim
 .ycm_extra_conf.py*
+
+# Buck
+.buckd
+buck-out
+.buckconfig.local
+.buckconfig.d
+buckaroo
+buckaroo_macros.bzl

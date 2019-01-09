@@ -1,0 +1,29 @@
+manifest = "8282b2dddc729924a5de917a1baacef58ec72de2812b7a77ad6a813907ca5807"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/cesanta-mongoose"
+target = "//:mongoose"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/google-googletest"
+target = "//:googletest"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pkg-config-curl"
+target = "//:curl"
+
+[lock."github.com/buckaroo-pm/cesanta-mongoose"]
+versions = [ "5.6.0" ]
+revision = "8e34aad44f7310074ef92600fa510d40b7d74586"
+
+[lock."github.com/buckaroo-pm/cesanta-mongoose".lock."github.com/buckaroo-pm/host-pthread"]
+versions = [ "branch=master" ]
+revision = "a62519aa69c8e3243d6065fbf4c1d2de072f86f6"
+
+[lock."github.com/buckaroo-pm/google-googletest"]
+versions = [ "branch=master" ]
+revision = "cb8d2c1a2fcd344953e6c129a1a699a2c230551d"
+
+[lock."github.com/buckaroo-pm/pkg-config-curl"]
+versions = [ "branch=master" ]
+revision = "c0eac677dc0066d1c994bf68edd314deebe7cb74"

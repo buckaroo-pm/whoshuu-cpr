@@ -1,0 +1,15 @@
+targets = [ "//:cpr" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pkg-config-curl"
+version = "branch=master"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/cesanta-mongoose"
+version = "~5.6"
+private = true
+
+[[dependency]]
+package = "github.com/buckaroo-pm/google-googletest"
+version = "branch=master"
+private = true

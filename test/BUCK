@@ -1,0 +1,170 @@
+load('//:buckaroo_macros.bzl', 'buckaroo_deps_from_package')
+
+test_deps = [
+    '//:cpr',
+  ] + \
+  buckaroo_deps_from_package('github.com/buckaroo-pm/google-googletest') + \
+  buckaroo_deps_from_package('github.com/buckaroo-pm/cesanta-mongoose')
+
+
+cxx_library(
+  name = 'server',
+  header_namespace = '',
+  exported_headers = [
+    'server.h',
+  ],
+  srcs = [
+    'server.cpp',
+  ],
+  deps = test_deps,
+)
+
+cxx_test(
+  name = 'alternating',
+  srcs = [
+    'alternating_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'async',
+  srcs = [
+    'async_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'callback',
+  srcs = [
+    'callback_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'delete',
+  srcs = [
+    'delete_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'error',
+  srcs = [
+    'error_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'get',
+  srcs = [
+    'get_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'head',
+  srcs = [
+    'head_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'options',
+  srcs = [
+    'options_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'patch',
+  srcs = [
+    'patch_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'post',
+  srcs = [
+    'post_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'proxy',
+  srcs = [
+    'proxy_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'put',
+  srcs = [
+    'put_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'raw-body',
+  srcs = [
+    'raw_body_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'session',
+  srcs = [
+    'session_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
+
+cxx_test(
+  name = 'util',
+  srcs = [
+    'util_tests.cpp',
+  ],
+  deps = test_deps + [
+    ':server',
+  ],
+)
