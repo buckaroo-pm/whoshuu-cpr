@@ -1,4 +1,4 @@
-manifest = "8282b2dddc729924a5de917a1baacef58ec72de2812b7a77ad6a813907ca5807"
+manifest = "2e9974fcb331ee23a5e10879a873c88038262f9cd3839dda9648bb3037458ca4"
 
 [[dependency]]
 package = "github.com/buckaroo-pm/cesanta-mongoose"
@@ -26,4 +26,4 @@ revision = "cb8d2c1a2fcd344953e6c129a1a699a2c230551d"
 
 [lock."github.com/buckaroo-pm/pkg-config-curl"]
 versions = [ "branch=master" ]
-revision = "c0eac677dc0066d1c994bf68edd314deebe7cb74"
+revision = "9589b95caa9fb75eb8fc0ac84127efdef15a6a4f"
